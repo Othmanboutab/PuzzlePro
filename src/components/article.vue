@@ -172,9 +172,15 @@ justify-content: center;
   height: auto;
   margin:  30px auto;
   background: white;
-border-radius: 20px;
+border-radius: 20p}
+
+input{
+  box-shadow: 1px 1px 20px rgb(214, 213, 213);
+  border:none;
+  padding:20px;
+}
 
 
   
-}
+
 </style>
