@@ -11,8 +11,21 @@
       v-bind:src = "post.img">
 
    </div>
+
+
+   <div class="description">
    <div class="desc">
     <p class="card_content">{{ post.content }}</p>
+   </div>
+
+   <div class="firststars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star white"></i>
+    </div>
+
    </div>
   </section>
 
@@ -81,6 +94,8 @@ body {
   background-color: rgb(209, 209, 209);
 }
 
+
+
 .onepost{
   display: flex;
 flex-direction: row;
@@ -94,6 +109,22 @@ border-radius: 20px 0 0 20px;
 
 .desc{
   width: 500px;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fas{
+  color: yellow;
+
+}
+
+.white{
+  color:black;
 }
 
 

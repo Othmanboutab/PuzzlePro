@@ -42,4 +42,31 @@ exports.posts = [
   ];
 
 
+
+
+  exports.carouselle = [
+    {
+      img:"https://mecapuzzle.com/wp-content/uploads/2019/02/Clock-min-510x510.jpg"
+    },
+
+
+    {
+      img:"https://mecapuzzle.com/wp-content/uploads/2019/10/calendrier-perpetuel-puzzle-en-bois-mecapuzzle.jpg"
+    },
+
+    {
+      img:"https://mecapuzzle.com/wp-content/uploads/2020/05/Puzzle-3D-Globe-Terrestre-en-bois.jpg"
+
+    },
+
+    {
+
+      img: "https://mecapuzzle.com/wp-content/uploads/2019/02/Boite-aux-tresors1-min-510x510.jpg"
+    }
+
+
+
+  ];
+
+
   
