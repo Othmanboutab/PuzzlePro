@@ -4,8 +4,8 @@
 
     <section class="main">
       <div class="hero">
-        <h1 class="firstTitle">Bienvenue sur votre page d'acceuil</h1>
-        <h2>Test technique pour les developpeur Angular, React, Vuejs</h2>
+        <h1 class="firstTitle">Bienvenue chez PuzzlePro</h1>
+        <h2>10 ans d'expérience sur la création de puzzle</h2>
         <router-link to="/articles" class="btn"
           >Voir la liste des articles</router-link
         >
@@ -31,7 +31,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(219, 219, 219);
   height: 400px;
 }
 

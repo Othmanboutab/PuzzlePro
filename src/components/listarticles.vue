@@ -6,8 +6,7 @@
       <h1 class="card_title">{{ post.label }}</h1>
       <img
         class="card_img"
-        src="https://image.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-260nw-1037719192.jpg"
-      />
+        v-bind:src = "post.img">
       <p class="card_content">{{ post.content }}</p>
 
       <router-link :to= "{ name: 'viewarticle' , params :{id : post.id}}" class="card_btn">Découvrir</router-link>
@@ -17,54 +16,18 @@
 
 <script>
 import navbar from "../components/navbar.vue";
+import { posts } from "../data/data";
+
 
 export default {
   name: "home",
 
-  data() {
+    data() {
     return {
-      posts: [
-        {
-          id: 1,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique",
-        },
-        {
-          id: 2,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique?",
-        },
-        {
-          id: 3,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique?",
-        },
-        {
-          id: 4,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique?",
-        },
-        {
-          id: 5,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique?",
-        },
-        {
-          id: 6,
-          label: "Les robots domineront le monde ?",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, suscipit nam numquam error totam vitae! Molestias omnis nemo voluptate debitis vitae fugit et, ut facere unde? Quaerat ipsum cupiditate similique?",
-        },
-      ],
+      posts: posts,
+      
     };
   },
-
-
 
 
   components: {
@@ -85,33 +48,26 @@ export default {
 .card {
   background-color: white;
   width: 450px;
-  height: 500px;
+  height: 650px;
   margin: 20px;
-  padding: 20px;
+  padding :20px 20px 0px 20px;
   border-radius: 10px;
   position: relative;
   margin-bottom: 40px;
+  box-shadow: 1px 1px 20px rgb(214, 213, 213);
 }
 
 .card_title {
   position: relative;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
-.card_title::after {
-  content: "";
-  width: 6.5rem;
-  height: 0.15rem;
-  background-color: black;
-  position: absolute;
-  top: 38px;
-  left: 1px;
-}
+
 
 .card_btn {
   color: black;
   position: absolute;
-  bottom: -4%;
+  bottom: -5%;
   left: 25%;
   background-color: yellow;
   padding: 15px 80px;
@@ -120,8 +76,11 @@ export default {
 }
 
 .card_img{
-margin-bottom: 10px;
-align-items: center;
+display: flex;
+width:250px;
+margin:  20px auto;
+border-radius: 15px;
+
 
     }
 

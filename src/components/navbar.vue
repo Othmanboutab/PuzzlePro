@@ -1,7 +1,7 @@
 <template>
   <div>
      <nav id="nav">
-        <h1 class="title"> RobotDemoApp</h1>
+        <h1 class="title"> <span class="pro"> Puzzle</span>Pro </h1>
       <ul class="links">
         <li>
           <router-link to="/">Accueil</router-link>
@@ -23,6 +23,10 @@
     display: flex;
     padding: 20px;
     
+}
+
+.pro{
+  color: yellow;
 }
 
 .title{

@@ -14,7 +14,7 @@
   }
 
   body{
-    background-color: rgb(63, 63, 63);
+    background-color: rgb(255, 255, 255);
 
     }
 </style>

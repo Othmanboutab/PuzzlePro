@@ -3,13 +3,17 @@
     <navbar></navbar>
   </div>
 
+<h1 class="card_titl">{{ post.label }}</h1>
   <section class="onepost">
-    <h1 class="card_titl">{{ post.label }}</h1>
+   <div class="image">
     <img
       class="card_image"
-      src="https://image.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-260nw-1037719192.jpg"
-    />
+      v-bind:src = "post.img">
+
+   </div>
+   <div class="desc">
     <p class="card_content">{{ post.content }}</p>
+   </div>
   </section>
 
   <section class="onecomment">
@@ -17,11 +21,16 @@
       <input type="text" v-model="comment" class="comment" id="comment" />
       <button class="btn" type="submit">Ajouter</button>
     </form>
-    <p class="listesofcomment">Listes des commentaires :</p>
+    
+  </section>
+  <div class="all">
+  <p class="listesofcomment">Listes des commentaires :</p>
+    <div class="allcomment">
     <p class="cmt" v-for="comment in commentlist" :key="comment">
       {{ comment }}
     </p>
-  </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -69,48 +78,66 @@ export default {
 
 <style scoped>
 body {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(209, 209, 209);
 }
 
-.onepost {
-  max-width: 800px;
-  margin: auto;
-  margin-top: 40px;
+.onepost{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+border-radius: 20px 0 0 20px;
+  box-shadow: 1px 1px 20px rgb(214, 213, 213);
+  width: max-content;
+  margin:  40px auto;
 }
+
+.desc{
+  width: 500px;
+}
+
+
+
 
 .card_titl {
-  color: white;
+  color: black;
   margin-bottom: 20px;
-}
+  text-align: center;
+  margin-top: 40px;
+} 
 
 .card_image {
-  width: 800px;
-  height: 300px;
-}
+width: 600px;
+object-fit: cover;
+border-radius: 20px 0 0 20px;
+display:flex;
+align-content: center;
+justify-content: center;
+margin: auto;
+  box-shadow: 1px 1px 20px rgb(214, 213, 213);}
 
 .card_content {
   margin-top: 30px;
-  color: white;
+  padding: 10px;
+  color: black;
   font-size: 17px;
-}
+} 
 
-.onecomment {
-  max-width: 800px;
-  margin: auto;
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 .form {
-  position: relative;
+  display: flex;
+align-content: center;
+justify-content: center;
+  
+
 }
 
 .listesofcomment {
   margin-top: 40px;
   color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .comment {
@@ -118,21 +145,36 @@ body {
   height: 80px;
 }
 
+.all{
+  display: flex;
+
+}
+
 .btn {
   background-color: yellow;
   padding: 10px 30px;
-  color: white;
-  position: absolute;
-  right: 15px;
-  bottom: 20px;
+  color: white;  
   border: none;
   color: black;
+  margin: 0 20px;
 }
 
 .cmt {
-  color: white;
-  margin-top: 30px;
-  border-bottom: 1px solid rgb(83, 83, 83);
-  padding-bottom: 10px;
+  color: black;
+  padding-bottom: 20px;
+  border-bottom: 1px solid yellow;
+  padding: 20px;
+  margin: 30px 30px;
+}
+
+.allcomment{
+  width: 1000px;
+  height: auto;
+  margin:  30px auto;
+  background: white;
+border-radius: 20px;
+
+
+  
 }
 </style>
