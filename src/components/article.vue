@@ -26,6 +26,25 @@
             <i class="fas fa-star white"></i>
     </div>
 
+   <div class="Like">
+     <input
+        class="cheekbox"
+        type="checkbox"
+        name="checkbox"
+        v-bind:id="post.id"
+        :value="post.id"
+        v-model="liked"
+      />
+      <label v-bind:for="post.id">
+        <i class="fas fa-heart "></i>
+      </label>
+
+      <p> Ajouter au favoris </p>
+
+
+   </div>
+
+
    </div>
   </section>
 
@@ -111,6 +130,23 @@ border-radius: 20px 0 0 20px;
   width: 500px;
 }
 
+.Like{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  border: 1px solid yellow;
+  padding: 20px;
+}
+
+.fa-heart{
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+
+
 .description{
   display: flex;
   flex-direction: column;
@@ -118,7 +154,7 @@ border-radius: 20px 0 0 20px;
   align-items: center;
 }
 
-.fas{
+.fa-star{
   color: yellow;
 
 }
