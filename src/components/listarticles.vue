@@ -120,32 +120,7 @@ export default {
   position: relative;
   margin-bottom: 40px;
   box-shadow: 1px 1px 20px rgb(214, 213, 213);
-}
-
-.cheekbox {
-  display: none;
-}
-
-.cheekbox:checked + label i {
-  color: red;
-  animation: heart 1.3 ease;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-@keyframes heart {
-  0% {
-    filter: hue-rotate(0deg);
-    transform: scale(1);
-  }
-  50% {
-    filter: hue-rotate(-270deg);
-    transform: scale(1.3);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-    transform: scale(1);
-  }
+  position: relative;
 }
 
 .fa-heart {
@@ -158,7 +133,6 @@ export default {
 }
 
 .card_title {
-  position: relative;
   text-align: center;
 }
 
@@ -189,31 +163,62 @@ export default {
   color: black;
 }
 
+.cheekbox {
+  display: none;
+}
+
+.cheekbox:checked + label i {
+  color: red;
+  animation: heart 1.3 ease;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@keyframes heart {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+  50% {
+    filter: hue-rotate(-270deg);
+    transform: scale(1.3);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+}
 
 @media screen and (max-width: 500px) {
- .result-counts{
-   display: flex;
-   flex-direction: column;
- }
+  .result-counts {
+    display: flex;
+    flex-direction: column;
+  }
 
- .result-count{
-   margin: 15px;
-   text-align: center;
+  .card {
+    padding: 20px 20px 30px 20px;
+    height: auto;
+  }
 
- }
+  .result-count {
+    margin: 15px;
+    text-align: center;
+  }
 
- .allpost{
-   margin-bottom: 80px;
- }
+  .allpost {
+    margin-bottom: 80px;
+  }
 
- 
-
-.fa-heart {
-
-margin-top: 20px;
-}
- .card_btn {
-left: 14%;
- }
+  .fa-heart {
+    margin-top: 20px;
+  }
+  .card_btn {
+    position: initial;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 </style>

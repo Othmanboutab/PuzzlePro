@@ -284,6 +284,7 @@ input{
 #comment{
   border-radius: 20px;
   margin-top: 20px;
+  box-shadow: 1px 1px 20px rgb(214, 213, 213);
 }
 
 .btn{
