@@ -59,7 +59,7 @@ li {
   background-color: gray;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   #nav {
     width: 100%;
   }

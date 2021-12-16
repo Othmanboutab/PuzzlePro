@@ -91,7 +91,7 @@ h2 {
   background-color: rgb(238, 238, 125);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .main {
     height: 800px;
     background: black;

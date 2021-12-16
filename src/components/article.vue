@@ -245,7 +245,7 @@ input{
   padding:20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
 .onepost{
   flex-direction: column;

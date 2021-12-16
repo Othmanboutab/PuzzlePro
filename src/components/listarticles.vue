@@ -190,7 +190,7 @@ export default {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
  .result-counts{
    display: flex;
    flex-direction: column;
