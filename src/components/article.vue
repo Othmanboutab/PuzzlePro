@@ -113,8 +113,6 @@ body {
   background-color: rgb(209, 209, 209);
 }
 
-
-
 .onepost{
   display: flex;
 flex-direction: row;
@@ -202,7 +200,7 @@ justify-content: center;
 
 .listesofcomment {
   margin-top: 40px;
-  color: white;
+  color:black;
   padding: 20px;
   text-align: center;
 }
@@ -247,7 +245,66 @@ input{
   padding:20px;
 }
 
+@media screen and (max-width: 400px) {
 
+.onepost{
+  flex-direction: column;
+  width: 90%;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.card_image{
+  width: 100%;
+  border-radius: 20px;
+  margin: 10px;
+
+}
+.card_content{
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.desc{
+  width: 100%;
+}
+
+
+.card_titl {
+  font-size: 15px ;
+}
+
+.form{
+  align-items: center;
+  margin-left: 20px;
+  
+}
+
+#comment{
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.btn{
+  padding: 0px 30px;
+  margin: 0px 20px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+
+.all{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+}
+
+.allcomment{
+  width: 100%;
+}
+}
   
 
 </style>

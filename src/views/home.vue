@@ -2,12 +2,15 @@
   <div>
     <navbar />
 
-<section class="slide">
-     <vueper-slides fade :touchable="false" class="slide">
-        <vueper-slide v-for="(slide, i) in carouselle" :key="i" :image="slide.img"  />
-    </vueper-slides>
-
-</section>
+    <section class="slide">
+      <vueper-slides fade :touchable="false" class="slide">
+        <vueper-slide
+          v-for="(slide, i) in carouselle"
+          :key="i"
+          :image="slide.img"
+        />
+      </vueper-slides>
+    </section>
 
     <section class="main">
       <div class="hero">
@@ -18,38 +21,26 @@
         >
       </div>
     </section>
-
-
-
-
-   
   </div>
-
 </template>
 
 <script>
 import navbar from "../components/navbar.vue";
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 import { carouselle } from "../data/data";
-
-
-
 
 export default {
   name: "home",
   components: {
     navbar,
     VueperSlides,
-    VueperSlide
-
+    VueperSlide,
   },
 
   data: () => ({
     carouselle,
-  
-  
-})
+  }),
 };
 </script>
 
@@ -64,7 +55,8 @@ export default {
   object-fit: cover;
 }
 
-.slide{
+
+.slide {
   background-color: white;
 }
 
@@ -73,7 +65,6 @@ export default {
   margin: auto;
   height: 500px;
   object-fit: cover;
-  
 }
 
 .firstTitle {
@@ -99,4 +90,22 @@ h2 {
   color: black;
   background-color: rgb(238, 238, 125);
 }
+
+@media screen and (max-width: 400px) {
+  .main {
+    height: 800px;
+    background: black;
+  }
+
+  h2 {
+    color: black;
+    text-align: center;
+  }
+
+  .slide {
+    display: none;
+  }
+}
+
+
 </style>

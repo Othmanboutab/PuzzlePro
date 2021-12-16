@@ -1,7 +1,7 @@
 <template>
   <navbar />
   <div class="search-barre">
-    <div>
+    <div class="result-counts">
       <input
         v-model="searchkey"
         type="search"
@@ -187,5 +187,33 @@ export default {
 
 .card_btn:hover {
   color: black;
+}
+
+
+@media screen and (max-width: 400px) {
+ .result-counts{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .result-count{
+   margin: 15px;
+   text-align: center;
+
+ }
+
+ .allpost{
+   margin-bottom: 80px;
+ }
+
+ 
+
+.fa-heart {
+
+margin-top: 20px;
+}
+ .card_btn {
+left: 14%;
+ }
 }
 </style>
